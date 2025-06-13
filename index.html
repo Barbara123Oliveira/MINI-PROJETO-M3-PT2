@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOJA DE ROUPAS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Roupas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+  <header>Loja de Roupas - Cadastro de Produtos</header>
+
+  <nav>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('apresentacao')">Apresentação</button>
+  </nav>
+
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <form id="formCadastro">
+      <input type="text" id="nome" placeholder="Nome da peça" required />
+      <input type="number" id="preco" placeholder="Preço" required />
+      <textarea id="descricao" placeholder="Descrição"></textarea>
+      <button type="submit" class="btn">Cadastrar</button>
+    </form>
+    <h3>Produtos Cadastrados</h3>
+    <div id="listaProdutos"></div>
+  </section>
+
+  <section id="apresentacao" class="hidden">
+    <h2>Apresentação dos Produtos</h2>
+    <div class="card-list" id="cards"></div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
